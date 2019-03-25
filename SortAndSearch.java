@@ -6,16 +6,16 @@ public class SortAndSearch {
 	        int n = 8; 
 			int[] arr = {1,6,5,8,9,5,6,2,9};
 			int last=arr.length-1;  
-	        int result = binarySearch(arr,0,last,n);  
+	        int result = binarySearch(arr,0,last,n);  // NOTE: doing a binary search on an unsorted array would fail if i search for 5
 	        if (result == -1){
 	            System.out.println("Element not found!");
 	        }
 	        else{
 	            System.out.println("Element found at index: "+result);  
 	        }
-	            bubbleSort(arr);
+	            bubbleSort(arr); // NOTE: put these in front of your binSearch and it will return the correct result
 	            printArray(arr);
-		}
+		} // NOTE: would be nice to have a blank line after each method
 		static int[] bubbleSort(int[] array){	
 			int n = array.length;
 			for(int i = 0; i <n ; i++){
@@ -39,7 +39,7 @@ public class SortAndSearch {
 				System.out.print(array[i] + " ");  
 			} 		    
 		}		
-		
+		// NOTE: indentation is a little bit off from here
 		
 		    public static int binarySearch(int arr[], int first, int last, int n){  
 		        if (last>=first){  

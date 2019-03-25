@@ -30,11 +30,11 @@ public class MagicSquare {
 		else {
 			return false;
 		}	
-	}
+	} // NOTE: would be nice to have a blank line after each method
 	public static void main (String[] args){
 		int z = 4;
-		int[][] square = new int [z][z];
-					square [0][0] = 2;
+		int[][] square = new int [z][z]; // NOTE: Why do you create a 4x4 matrix to fill it only by 3x3?
+					square [0][0] = 2; // NOTE: indentation is a little bit off from here
 					square [0][1] = 7;
 					square [0][2] = 6;
 					square [1][0] = 9;
@@ -44,10 +44,10 @@ public class MagicSquare {
 					square [2][1] = 3;
 					square [2][2] = 8;		         
 
-					if (MagicSquare(square)==true){
+					if (MagicSquare(square)==true){ // NOTE: you don't need to check MagicSquare(square)==true -> MagicSquare(square) is enough
 							System.out.println("Magic Square"); 
 					}
-	    	        else {
+	    	        else { // NOTE: indentation is a little bit off from here
 	    		    System.out.println("Not a magic Square");
 	    	        }				
 	}
