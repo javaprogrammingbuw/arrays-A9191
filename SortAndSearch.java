@@ -3,19 +3,20 @@ import java.util.Arrays;
 public class SortAndSearch {
 	
 		public static void main(String[]args){	
-	        int n = 8; 
+	        int n = 2; 
 			int[] arr = {1,6,5,8,9,5,6,2,9};
 			int last=arr.length-1;  
-	        int result = binarySearch(arr,0,last,n);  // NOTE: doing a binary search on an unsorted array would fail if i search for 5
+			bubbleSort(arr);
+	        int result = binarySearch(arr,0,last,n);  
 	        if (result == -1){
-	            System.out.println("Element not found!");
+	        	System.out.println("Element not found!");
 	        }
 	        else{
 	            System.out.println("Element found at index: "+result);  
 	        }
-	            bubbleSort(arr); // NOTE: put these in front of your binSearch and it will return the correct result
-	            printArray(arr);
-		} // NOTE: would be nice to have a blank line after each method
+	       
+	        printArray(arr);
+		}
 		static int[] bubbleSort(int[] array){	
 			int n = array.length;
 			for(int i = 0; i <n ; i++){
@@ -39,7 +40,6 @@ public class SortAndSearch {
 				System.out.print(array[i] + " ");  
 			} 		    
 		}		
-		// NOTE: indentation is a little bit off from here
 		
 		    public static int binarySearch(int arr[], int first, int last, int n){  
 		        if (last>=first){  
@@ -56,8 +56,7 @@ public class SortAndSearch {
 		        }  
 		        return -1;  
 		    }  	      
-		
-		   }
+}
 	//todo: Write a method bubbleSrt which gets an integer array as input and which sorts this array according to the bubblesort algorithm
 	//If you don't know how bubblesort works you can read it here: http://www.pkirs.utep.edu/CIS3355/Tutorials/chapter9/tutorial9A/bubblesort.htm
 	//Now write another method binSrch. This method again receives an integer array as input together with another integer n.
